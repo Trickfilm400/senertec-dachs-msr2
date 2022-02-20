@@ -16,3 +16,5 @@ const WriteKeyList: IWriteKeyList = {
         }
     }
 };
+
+export default WriteKeyList;
