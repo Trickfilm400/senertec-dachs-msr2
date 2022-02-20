@@ -451,12 +451,12 @@ const ReadKeyList: IReadKeyList = {
                 fModulLaeuft: {
                     key: "Mm[0].ModulSteuerung.fModulLaeuft",
                     doc: "Status Modul 1",
-                    unit: (x => x === " true")
+                    unit: (x => x === "true")
                 },
                 fModulVerfuegbar: {
                     "key": "Mm[0].ModulSteuerung.fModulVerfuegbar",
                     "doc": "Verfügbarkeit Modul 1",
-                    "unit": (x => x === " true")
+                    "unit": (x => x === "true")
                 }
             }
         }, {
@@ -464,12 +464,12 @@ const ReadKeyList: IReadKeyList = {
                 fModulLaeuft: {
                     key: "Mm[1].ModulSteuerung.fModulLaeuft",
                     doc: "Status Modul 2",
-                    unit: (x => x === " true")
+                    unit: (x => x === "true")
                 },
                 fModulVerfuegbar: {
                     "key": "Mm[1].ModulSteuerung.fModulVerfuegbar",
                     "doc": "Verfügbarkeit Modul 2",
-                    "unit": (x => x === " true")
+                    "unit": (x => x === "true")
                 }
             }
         }, {
@@ -477,12 +477,12 @@ const ReadKeyList: IReadKeyList = {
                 fModulLaeuft: {
                     key: "Mm[2].ModulSteuerung.fModulLaeuft",
                     doc: "Status Modul 3",
-                    unit: (x => x === " true")
+                    unit: (x => x === "true")
                 },
                 fModulVerfuegbar: {
                     "key": "Mm[2].ModulSteuerung.fModulVerfuegbar",
                     "doc": "Verfügbarkeit Modul 3",
-                    "unit": (x => x === " true")
+                    "unit": (x => x === "true")
                 }
             }
         }, {
@@ -490,12 +490,12 @@ const ReadKeyList: IReadKeyList = {
                 fModulLaeuft: {
                     key: "Mm[3].ModulSteuerung.fModulLaeuft",
                     doc: "Status Modul 4",
-                    unit: (x => x === " true")
+                    unit: (x => x === "true")
                 },
                 fModulVerfuegbar: {
                     "key": "Mm[3].ModulSteuerung.fModulVerfuegbar",
                     "doc": "Verfügbarkeit Modul 4",
-                    "unit": (x => x === " true")
+                    "unit": (x => x === "true")
                 }
             }
         }, {
@@ -503,12 +503,12 @@ const ReadKeyList: IReadKeyList = {
                 fModulLaeuft: {
                     key: "Mm[4].ModulSteuerung.fModulLaeuft",
                     doc: "Status Modul 5",
-                    unit: (x => x === " true")
+                    unit: (x => x === "true")
                 },
                 fModulVerfuegbar: {
                     "key": "Mm[4].ModulSteuerung.fModulVerfuegbar",
                     "doc": "Verfügbarkeit Modul 5",
-                    "unit": (x => x === " true")
+                    "unit": (x => x === "true")
                 }
             }
         }, {
@@ -516,12 +516,12 @@ const ReadKeyList: IReadKeyList = {
                 fModulLaeuft: {
                     key: "Mm[5].ModulSteuerung.fModulLaeuft",
                     doc: "Status Modul 6",
-                    unit: (x => x === " true")
+                    unit: (x => x === "true")
                 },
                 fModulVerfuegbar: {
                     "key": "Mm[5].ModulSteuerung.fModulVerfuegbar",
                     "doc": "Verfügbarkeit Modul 6",
-                    "unit": (x => x === " true")
+                    "unit": (x => x === "true")
                 }
             }
         }, {
@@ -529,12 +529,12 @@ const ReadKeyList: IReadKeyList = {
                 fModulLaeuft: {
                     key: "Mm[6].ModulSteuerung.fModulLaeuft",
                     doc: "Status Modul 7",
-                    unit: (x => x === " true")
+                    unit: (x => x === "true")
                 },
                 fModulVerfuegbar: {
                     "key": "Mm[6].ModulSteuerung.fModulVerfuegbar",
                     "doc": "Verfügbarkeit Modul 7",
-                    "unit": (x => x === " true")
+                    "unit": (x => x === "true")
                 }
             }
         }, {
@@ -542,12 +542,12 @@ const ReadKeyList: IReadKeyList = {
                 fModulLaeuft: {
                     key: "Mm[7].ModulSteuerung.fModulLaeuft",
                     doc: "Status Modul 8",
-                    unit: (x => x === " true")
+                    unit: (x => x === "true")
                 },
                 fModulVerfuegbar: {
                     "key": "Mm[7].ModulSteuerung.fModulVerfuegbar",
                     "doc": "Verfügbarkeit Modul 8",
-                    "unit": (x => x === " true")
+                    "unit": (x => x === "true")
                 }
             }
         }, {
@@ -555,12 +555,12 @@ const ReadKeyList: IReadKeyList = {
                 fModulLaeuft: {
                     key: "Mm[8].ModulSteuerung.fModulLaeuft",
                     doc: "Status Modul 9",
-                    unit: (x => x === " true")
+                    unit: (x => x === "true")
                 },
                 fModulVerfuegbar: {
                     "key": "Mm[8].ModulSteuerung.fModulVerfuegbar",
                     "doc": "Verfügbarkeit Modul 9",
-                    "unit": (x => x === " true")
+                    "unit": (x => x === "true")
                 }
             }
         }, {
@@ -568,12 +568,12 @@ const ReadKeyList: IReadKeyList = {
                 fModulLaeuft: {
                     key: "Mm[9].ModulSteuerung.fModulLaeuft",
                     doc: "Status Modul 10",
-                    unit: (x => x === " true")
+                    unit: (x => x === "true")
                 },
                 fModulVerfuegbar: {
                     "key": "Mm[9].ModulSteuerung.fModulVerfuegbar",
                     "doc": "Verfügbarkeit Modul 10",
-                    "unit": (x => x === " true")
+                    "unit": (x => x === "true")
                 }
             }
         }
