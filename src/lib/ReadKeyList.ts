@@ -1,6 +1,7 @@
 import {IReadKeyList} from "../interfaces/IReadKeyList";
+import {KeyListEntity} from "../interfaces/KeyListEntity";
 
-const ReadKeyList: IReadKeyList = {
+const ReadKeyList: IReadKeyList<KeyListEntity> = {
     Hka_Bd: {
         Anforderung: {
             ModulAnzahl: {

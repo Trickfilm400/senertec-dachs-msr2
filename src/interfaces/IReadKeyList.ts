@@ -1,221 +1,219 @@
-import {KeyListEntity} from "./KeyListEntity";
-
-export interface IReadKeyList {
+export interface IReadKeyList<T> {
     Hka_Bd: {
         Anforderung: {
-            ModulAnzahl: KeyListEntity
+            ModulAnzahl: T
             UStromF_Anf: {
-                bFlagSF: KeyListEntity
+                bFlagSF: T
             }
         },
         UStromF_Frei: {
-            bFreigabe: KeyListEntity
+            bFreigabe: T
         },
-        bStoerung: KeyListEntity,
-        bWarnung: KeyListEntity,
+        bStoerung: T,
+        bWarnung: T,
         UHka_Anf: {
             Anforderung: {
-                fStrom: KeyListEntity
+                fStrom: T
             },
-            usAnforderung: KeyListEntity
+            usAnforderung: T
         },
         UHka_Frei: {
-            usFreigabe: KeyListEntity
+            usFreigabe: T
         },
-        ulArbeitElektr: KeyListEntity,
-        ulArbeitThermHka: KeyListEntity,
-        ulArbeitThermKon: KeyListEntity,
-        ulBetriebssekunden: KeyListEntity,
-        ulAnzahlStarts: KeyListEntity,
+        ulArbeitElektr: T,
+        ulArbeitThermHka: T,
+        ulArbeitThermKon: T,
+        ulBetriebssekunden: T,
+        ulAnzahlStarts: T,
     };
     Hka_Bd_Stat: {
-        uchSeriennummer: KeyListEntity,
-        uchTeilenummer: KeyListEntity,
-        ulInbetriebnahmedatum: KeyListEntity,
+        uchSeriennummer: T,
+        uchTeilenummer: T,
+        ulInbetriebnahmedatum: T,
     }
     BD3112: {
         Hka_Bd: {
-            ulBetriebssekunden: KeyListEntity,
-            ulAnzahlStarts: KeyListEntity,
-            ulArbeitElektr: KeyListEntity,
-            ulArbeitThermHka: KeyListEntity,
-            ulArbeitThermKon: KeyListEntity,
+            ulBetriebssekunden: T,
+            ulAnzahlStarts: T,
+            ulArbeitElektr: T,
+            ulArbeitThermHka: T,
+            ulArbeitThermKon: T,
         },
         Ww_Bd: {
-            ulWwMengepA: KeyListEntity
+            ulWwMengepA: T
         }
     }
     Brenner_Bd: {
-        bIstStatus: KeyListEntity,
-        bWarnung: KeyListEntity,
+        bIstStatus: T,
+        bWarnung: T,
         UBrenner_Anf: {
-            usAnforderung: KeyListEntity
+            usAnforderung: T
         },
         UBrenner_Frei: {
-            bFreigabe: KeyListEntity
+            bFreigabe: T
         }
-        ulAnzahlStarts: KeyListEntity
-        ulBetriebssekunden: KeyListEntity
+        ulAnzahlStarts: T
+        ulBetriebssekunden: T
     },
     Hka_Ew: {
         HydraulikNr: {
-            bSpeicherArt: KeyListEntity,
-            bWW_Art: KeyListEntity,
-            b2_Waermeerzeuger: KeyListEntity,
-            bMehrmodul: KeyListEntity,
+            bSpeicherArt: T,
+            bWW_Art: T,
+            b2_Waermeerzeuger: T,
+            bMehrmodul: T,
 
         }
     },
     Hka_Mw1: {
         Temp: {
-            sAbgasHKA: KeyListEntity
-            sAbgasMotor: KeyListEntity
-            sKapsel: KeyListEntity
-            sbAussen: KeyListEntity
-            sbFreigabeModul: KeyListEntity
-            sbFuehler1: KeyListEntity
-            sbFuehler2: KeyListEntity
-            sbGen: KeyListEntity
-            sbMotor: KeyListEntity
-            sbRegler: KeyListEntity
-            sbRuecklauf: KeyListEntity
-            sbVorlauf: KeyListEntity
-            sbZS_Fuehler3: KeyListEntity
-            sbZS_Fuehler4: KeyListEntity
-            sbZS_Vorlauf1: KeyListEntity
-            sbZS_Vorlauf2: KeyListEntity
-            sbZS_Warmwasser: KeyListEntity
+            sAbgasHKA: T
+            sAbgasMotor: T
+            sKapsel: T
+            sbAussen: T
+            sbFreigabeModul: T
+            sbFuehler1: T
+            sbFuehler2: T
+            sbGen: T
+            sbMotor: T
+            sbRegler: T
+            sbRuecklauf: T
+            sbVorlauf: T
+            sbZS_Fuehler3: T
+            sbZS_Fuehler4: T
+            sbZS_Vorlauf1: T
+            sbZS_Vorlauf2: T
+            sbZS_Warmwasser: T
         }
         Solltemp: {
-            sbRuecklauf: KeyListEntity
-            sbVorlauf: KeyListEntity
+            sbRuecklauf: T
+            sbVorlauf: T
         }
         Aktor: {
-            bWwPumpe: KeyListEntity
-            fFreiAltWaerm: KeyListEntity
-            fMischer1Auf: KeyListEntity
-            fMischer1Zu: KeyListEntity
-            fMischer2Auf: KeyListEntity
-            fMischer2Zu: KeyListEntity
-            fProgAus1: KeyListEntity
-            fProgAus2: KeyListEntity
-            fProgAus3: KeyListEntity
-            fStoerung: KeyListEntity
-            fUPHeizkreis1: KeyListEntity
-            fUPHeizkreis2: KeyListEntity
-            fUPKuehlung: KeyListEntity
-            fUPVordruck: KeyListEntity
-            fUPZirkulation: KeyListEntity
-            fWartung: KeyListEntity
+            bWwPumpe: T
+            fFreiAltWaerm: T
+            fMischer1Auf: T
+            fMischer1Zu: T
+            fMischer2Auf: T
+            fMischer2Zu: T
+            fProgAus1: T
+            fProgAus2: T
+            fProgAus3: T
+            fStoerung: T
+            fUPHeizkreis1: T
+            fUPHeizkreis2: T
+            fUPKuehlung: T
+            fUPVordruck: T
+            fUPZirkulation: T
+            fWartung: T
         }
-        sWirkleistung: KeyListEntity
-        ulMotorlaufsekunden: KeyListEntity
-        usDrehzahl: KeyListEntity
+        sWirkleistung: T
+        ulMotorlaufsekunden: T
+        usDrehzahl: T
     },
     Laufraster15Min_aktTag: {
         bDoppelstunde: [
-            KeyListEntity,
-            KeyListEntity,
-            KeyListEntity,
-            KeyListEntity,
-            KeyListEntity,
-            KeyListEntity,
-            KeyListEntity,
-            KeyListEntity,
-            KeyListEntity,
-            KeyListEntity,
-            KeyListEntity,
-            KeyListEntity,
+            T,
+            T,
+            T,
+            T,
+            T,
+            T,
+            T,
+            T,
+            T,
+            T,
+            T,
+            T,
         ]
     },
     Mm: [
         {
             ModulSteuerung: {
-                fModulLaeuft: KeyListEntity
-                fModulVerfuegbar: KeyListEntity
+                fModulLaeuft: T
+                fModulVerfuegbar: T
             }
         },
         {
             ModulSteuerung: {
-                fModulLaeuft: KeyListEntity
-                fModulVerfuegbar: KeyListEntity
+                fModulLaeuft: T
+                fModulVerfuegbar: T
             }
         },
         {
             ModulSteuerung: {
-                fModulLaeuft: KeyListEntity
-                fModulVerfuegbar: KeyListEntity
+                fModulLaeuft: T
+                fModulVerfuegbar: T
             }
         },
         {
             ModulSteuerung: {
-                fModulLaeuft: KeyListEntity
-                fModulVerfuegbar: KeyListEntity
+                fModulLaeuft: T
+                fModulVerfuegbar: T
             }
         },
         {
             ModulSteuerung: {
-                fModulLaeuft: KeyListEntity
-                fModulVerfuegbar: KeyListEntity
+                fModulLaeuft: T
+                fModulVerfuegbar: T
             }
         },
         {
             ModulSteuerung: {
-                fModulLaeuft: KeyListEntity
-                fModulVerfuegbar: KeyListEntity
+                fModulLaeuft: T
+                fModulVerfuegbar: T
             }
         },
         {
             ModulSteuerung: {
-                fModulLaeuft: KeyListEntity
-                fModulVerfuegbar: KeyListEntity
+                fModulLaeuft: T
+                fModulVerfuegbar: T
             }
         },
         {
             ModulSteuerung: {
-                fModulLaeuft: KeyListEntity
-                fModulVerfuegbar: KeyListEntity
+                fModulLaeuft: T
+                fModulVerfuegbar: T
             }
         },
         {
             ModulSteuerung: {
-                fModulLaeuft: KeyListEntity
-                fModulVerfuegbar: KeyListEntity
+                fModulLaeuft: T
+                fModulVerfuegbar: T
             }
         },
         {
             ModulSteuerung: {
-                fModulLaeuft: KeyListEntity
-                fModulVerfuegbar: KeyListEntity
+                fModulLaeuft: T
+                fModulVerfuegbar: T
             }
         },
     ]
     Mm_MinMax: {
-        bModulBhMaxWart: KeyListEntity
-        bModulBhMinWart: KeyListEntity
-        sBhMaxWart: KeyListEntity
-        sBhMinWart: KeyListEntity
+        bModulBhMaxWart: T
+        bModulBhMinWart: T
+        sBhMaxWart: T
+        sBhMinWart: T
         ModulBhMax: {
-            bModulNr: KeyListEntity
-            ulWert: KeyListEntity
+            bModulNr: T
+            ulWert: T
         }
         ModulBhMin: {
-            bModulNr: KeyListEntity
-            ulWert: KeyListEntity
+            bModulNr: T
+            ulWert: T
         }
         ModulStartMax: {
-            bModulNr: KeyListEntity
-            ulWert: KeyListEntity
+            bModulNr: T
+            ulWert: T
         }
         ModulStartMin: {
-            bModulNr: KeyListEntity
-            ulWert: KeyListEntity
+            bModulNr: T
+            ulWert: T
         }
     }
     Wartung_Cache: {
-        fStehtAn: KeyListEntity
-        ulBetriebssekundenBei: KeyListEntity
-        ulZeitstempel: KeyListEntity
-        usIntervall: KeyListEntity
+        fStehtAn: T
+        ulBetriebssekundenBei: T
+        ulZeitstempel: T
+        usIntervall: T
     }
 }

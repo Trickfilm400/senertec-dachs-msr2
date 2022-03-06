@@ -3,6 +3,7 @@ import ReadKeyList from "./ReadKeyList";
 import * as _ from "lodash";
 import {ClientOptions} from "../interfaces/ClientOptions";
 import {IReadKeyList} from "../interfaces/IReadKeyList";
+import {KeyListEntityResponse} from "../interfaces/KeyListEntity";
 
 /**
  * axios HTTP Client Class
@@ -45,7 +46,7 @@ export class HttpClient {
      * @param {string[]} keys - Array of request keys
      * @return Promise
      */
-    fetchByKeys(...keys: string[]): Promise<Partial<IReadKeyList>> {
+    fetchByKeys(...keys: string[]): Promise<Partial<IReadKeyList<KeyListEntityResponse>>> {
         return new Promise((resolve, reject) => {
             axios({
                 auth: {
@@ -74,7 +75,7 @@ export class HttpClient {
         res = res.trim();
         //split to line by line
         const array = res.split("\n");
-        const result: Partial<IReadKeyList> = {};
+        const result: Partial<IReadKeyList<KeyListEntityResponse>> = {};
         //loop through every result line
         array.forEach(line => {
             //split key and value
