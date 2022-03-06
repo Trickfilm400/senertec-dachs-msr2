@@ -20,6 +20,10 @@ export class HttpClient {
     constructor(options: ClientOptions) {
         this.options = options;
         //combine parameter to baseUrl
+        //check http prefix
+        const protocol = options.protocol ? options.protocol : "http";
+        this.options.host = this.options.host.startsWith("http") ? this.options.host : `${protocol}://${this.options.host}`
+        //combine all parameter for url
         this.url = `${this.options.host}:${this.options.port ?? 8080}`;
     }
 
