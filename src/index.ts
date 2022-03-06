@@ -5,6 +5,7 @@ import keyTemplates from "./lib/keyTemplates";
 
 
 export class SenerTecDachsClientMSR2 {
+    public readonly ReadKeyList = ReadKeyList;
     private readonly options: ClientOptions;
     private client: HttpClient;
 
@@ -38,6 +39,10 @@ export class SenerTecDachsClientMSR2 {
             ReadKeyList.Hka_Bd.ulAnzahlStarts.key,
             ReadKeyList.Hka_Mw1.usDrehzahl.key
         ];
+        return this.client.fetchByKeys(...keys);
+    }
+
+    fetchKeys(...keys: string[]) {
         return this.client.fetchByKeys(...keys);
     }
 }
