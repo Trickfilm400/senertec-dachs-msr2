@@ -86,11 +86,15 @@ export class HttpClient {
             const [key, value] = line.split("=");
             //fetch key data, mostly for unit conversion
             let keyData = _.get(ReadKeyList, key);
-            result[key] = {
-                value,
-                //key: keyData,
-                parsedValue: keyData?.unit(value)
-            };
+            //create object value
+            let val: KeyListEntityResponse = {
+                value: keyData?.unit(value) ?? value
+            }
+            //check for adding optional value data via config
+            if (this.options.resultConfig?.addRawValue) val.rawValue = value;
+            if (this.options.resultConfig?.addKeyObject) val.key = keyData;
+            //save to return object
+            _.set(result, key, val);
         });
         //console.log(result);
         return result;

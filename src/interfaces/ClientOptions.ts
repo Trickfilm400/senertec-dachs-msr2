@@ -4,4 +4,8 @@ export interface ClientOptions {
     port?: number,
     username?: string,
     password?: string,
+    resultConfig?: {
+        addRawValue?: boolean,
+        addKeyObject?: boolean
+    }
 }
