@@ -50,7 +50,7 @@ export class HttpClient {
      * @param {string[]} keys - Array of request keys
      * @return Promise
      */
-    fetchByKeys(...keys: string[]): Promise<Partial<IReadKeyList<KeyListEntityResponse>>> {
+    fetchByKeys(...keys: string[]): Promise<Partial<IReadKeyList<KeyListEntityResponse<string | number | boolean>>>> {
         return new Promise((resolve, reject) => {
             axios({
                 auth: {
@@ -79,7 +79,7 @@ export class HttpClient {
         res = res.trim();
         //split to line by line
         const array = res.split("\n");
-        const result: Partial<IReadKeyList<KeyListEntityResponse>> = {};
+        const result: Partial<IReadKeyList<KeyListEntityResponse<string | number | boolean>>> = {};
         //loop through every result line
         array.forEach(line => {
             //split key and value
@@ -87,7 +87,7 @@ export class HttpClient {
             //fetch key data, mostly for unit conversion
             let keyData = _.get(ReadKeyList, key);
             //create object value
-            let val: KeyListEntityResponse = {
+            let val: KeyListEntityResponse<string | number | boolean> = {
                 value: keyData?.unit(value) ?? value
             }
             //check for adding optional value data via config
