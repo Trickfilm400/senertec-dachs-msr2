@@ -10,8 +10,8 @@ jobs:
           node-version: 16
       - run: npm ci
       - run: npm run build
+      - run: npm version prerelease --preid ${{ github.GITHUB_REF_TYPE }}-${{ github.GITHUB_REF_NAME }}-${{ github.GITHUB_SHA }}
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           registry: https://npm.pkg.github.com
-          check-version: false
