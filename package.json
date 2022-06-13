@@ -22,11 +22,11 @@
   "author": "Nico W. <info@ni-wa.de> (https://trickfilm400.de/)",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^17.0.24",
-    "typescript": "^4.6.3"
+    "@types/node": "^17.0.42",
+    "typescript": "^4.7.3"
   },
   "dependencies": {
-    "axios": "^0.26.1",
+    "axios": "^0.27.2",
     "lodash": "^4.17.21"
   }
 }
