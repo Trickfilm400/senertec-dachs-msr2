@@ -1,0 +1,12 @@
+node_modules/
+src/
+.editorconfig
+.gitignore
+.gitlab-ci.yml
+test-results.xml
+tsconfig.json
+coverage/
+.nyc_output
+.idea/
+test/
+.git/
