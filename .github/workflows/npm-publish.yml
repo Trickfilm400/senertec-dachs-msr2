@@ -10,7 +10,7 @@ jobs:
           node-version: 16
       - run: npm ci
       - run: npm run build
-      - run: npm version prerelease --no-git-tag-version --preid ${{ github.GITHUB_REF_NAME }}-${{ github.GITHUB_SHA }}
+      - run: npm version prerelease --no-git-tag-version --preid ${{ github.ref_name }}-${{ github.sha }}
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
