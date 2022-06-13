@@ -22,6 +22,6 @@ export {
     ClientOptions,
     IReadKeyList,
     IWriteKeyList,
-    KeyListEntity
-
+    KeyListEntity,
+    KeyListEntityResponse
 };
