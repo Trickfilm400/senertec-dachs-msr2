@@ -10,11 +10,11 @@ export declare class SenerTecDachsClientMSR2 {
 
     constructor(options: ClientOptions);
 
-    fetchAll(): Promise<Partial<IReadKeyList<KeyListEntityResponse>>>;
+    fetchAll(): Promise<Partial<IReadKeyList<KeyListEntityResponse<string | number | boolean>>>>;
 
-    fetchUsefulData(): Promise<Partial<IReadKeyList<KeyListEntityResponse>>>;
+    fetchUsefulData(): Promise<Partial<IReadKeyList<KeyListEntityResponse<string | number | boolean>>>>;
 
-    fetchKeys(...keys: string[]): Promise<Partial<IReadKeyList<KeyListEntityResponse>>>;
+    fetchKeys(...keys: string[]): Promise<Partial<IReadKeyList<KeyListEntityResponse<string | number | boolean>>>>;
 }
 
 
