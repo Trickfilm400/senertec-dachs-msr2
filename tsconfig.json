@@ -4,7 +4,6 @@
 		"target": "es6",
 		"outDir": "dist",
 		"moduleResolution": "node",
-		"declarationDir": "types",
 		"declaration": false,
 		"removeComments": true,
 		"noImplicitAny": true,
