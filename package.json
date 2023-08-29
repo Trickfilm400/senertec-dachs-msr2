@@ -1,6 +1,6 @@
 {
   "name": "@trickfilm400/senertec-dachs-msr2",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "SenerTec Dachs MSR2 GLT-Ethernet REST API Client",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
