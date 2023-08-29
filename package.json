@@ -24,6 +24,10 @@
   "types": "dist/index.d.ts",
   "author": "Nico W. <info@ni-wa.de> (https://trickfilm400.de/)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Trickfilm400/senertec-dachs-msr2/"
+  },
   "devDependencies": {
     "@types/lodash": "^4.14.197",
     "@types/node": "^20.5.7",
