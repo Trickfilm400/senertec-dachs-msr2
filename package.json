@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "description": "SenerTec Dachs MSR2 GLT-Ethernet REST API Client",
   "main": "dist/index.js",
+  "module": "dist/esm/index.js",
   "typings": "types/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && tsc -p tsconfig.esm.json"
   },
   "keywords": [
     "typescript",
@@ -24,14 +25,15 @@
   "author": "Nico W. <info@ni-wa.de> (https://trickfilm400.de/)",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.3.1",
-    "typescript": "^5.1.3"
+    "@types/lodash": "^4.14.197",
+    "@types/node": "^20.5.7",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
-    "axios": "^1.4.0",
+    "axios": "^1.5.0",
     "lodash": "^4.17.21"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   }
 }

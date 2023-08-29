@@ -55,7 +55,7 @@ export class HttpClient {
             axios({
                 auth: {
                     username: this.options.username || "glt",
-                    password: this.options.password || undefined
+                    password: this.options.password || ""
                 },
                 baseURL: this.url,
                 url: `/getKey` + this.urlBuilder(keys)
