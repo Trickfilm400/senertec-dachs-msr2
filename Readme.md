@@ -4,7 +4,7 @@ This NPM package provides a full nodejs-api for the Dachs-Ethernet-Card-HTTP-Api
 
 # Usage
 
-- Install npm package (from github)
+- Install npm package
 
 ## Typescript Example
 
@@ -44,4 +44,4 @@ client.fetchKeys(
 ```
 
 
-&copy; 2022 Trickfilm400
+&copy; 2022-2024 Trickfilm400
