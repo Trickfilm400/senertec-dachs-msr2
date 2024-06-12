@@ -9,6 +9,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -23,6 +26,7 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           access: public
           tag: latest
+          provenance: true
       #### PUBLISH TO GITHUB NPM ####
       - uses: JS-DevTools/npm-publish@v3
         with:
@@ -30,3 +34,4 @@ jobs:
           registry: https://npm.pkg.github.com
           access: public
           tag: beta
+          provenance: true
