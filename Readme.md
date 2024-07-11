@@ -1,6 +1,6 @@
 # senertec-dachs-msr2
 
-This NPM package provides a full nodejs-api for the Dachs-Ethernet-Card-HTTP-Api.
+This NPM package provides a full nodejs-api for the Dachs-Ethernet-Card-HTTP-Api. Look [here](https://wiki.my-gekko.com/de/media/einbindungsenertecdachsbhkwv4795pdf_original.pdf) for the a rough german API documentation.
 
 # Usage
 
