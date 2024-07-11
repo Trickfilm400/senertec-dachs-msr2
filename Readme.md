@@ -1,7 +1,7 @@
 # senertec-dachs-msr2
 
 This NPM package provides a full nodejs-api for the Dachs-Ethernet-Card-HTTP-Api. This programm is based on the API-Documentation named [Beschreibung der
-GLT-Schnittstelle - Dachs Ethernet -](https://community.symcon.de/uploads/short-url/6LOE4M5F4zx6XNMeQGgZEAs7AiC.rar), which has been provided within the forum dicussion ([link](https://community.symcon.de/t/senertec-bhkw-glt-einbindung-ueber-lan-ethernet/26658).
+GLT-Schnittstelle - Dachs Ethernet -](https://community.symcon.de/uploads/short-url/6LOE4M5F4zx6XNMeQGgZEAs7AiC.rar), which has been provided within the forum dicussion ([link](https://community.symcon.de/t/senertec-bhkw-glt-einbindung-ueber-lan-ethernet/26658)).
 
 # Usage
 
