@@ -30,11 +30,11 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.17.7",
-    "@types/node": "^20.14.2",
-    "typescript": "^5.5.4"
+    "@types/node": "^20.16.5",
+    "typescript": "^5.6.2"
   },
   "dependencies": {
-    "axios": "^1.7.4",
+    "axios": "^1.7.7",
     "lodash": "^4.17.21"
   }
 }
