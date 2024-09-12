@@ -4,7 +4,13 @@ This NPM package provides a full nodejs-api for the Dachs-Ethernet-Card-HTTP-Api
 
 # Usage
 
-- Install npm package
+- Install npm package with 
+```shell
+npm i @trickfilm400/senertec-dachs-msr2
+```
+- To see the complete list of all keys to fetch, visit the `lib/ReadKeyList.ts` file in the source code.
+  There is a short description and the unit given. 
+  Use the JSON path as in the example below and select the keys you need to fetch manually.
 
 ## Typescript Example
 
@@ -23,13 +29,15 @@ const client = new SenerTecDachsClientMSR2({
     }
 });
 
-
+//fetch 4 predefined keys as written in the 'lib/index.ts' file.
+//You probably don't need this if you want to fetch specific data
 client.fetchUsefulData().then(result => {
     console.log(result)
 });
 
 // OR
 
+//fetch specified keys manually
 client.fetchKeys(
     //betriebsdaten
     client.ReadKeyList.Hka_Bd.ulAnzahlStarts.key,
@@ -41,6 +49,11 @@ client.fetchKeys(
 ).then(result => {
     //...
 });
+
+// OR
+
+//fetchAll fetches all readable keys at once
+client.fetchAll().then(console.log);
 ```
 
 ## References and useful links
