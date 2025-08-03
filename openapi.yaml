@@ -1,0 +1,225 @@
+openapi: 3.0.0
+info:
+  title: senertec-dachs-msr2 API
+  version: '1.0'
+  description: This is a OpenAPI Schema for the SenerTec Dachs MSR2 GLT Module.
+  contact:
+    url: 'https://github.com/Trickfilm400/senertec-dachs-msr2'
+  license:
+    name: MIT
+servers:
+  - url: 'http://localhost:8080'
+    description: Localhost
+  - url: 'http://<your-ip>:8080'
+    description: Prod
+paths:
+  /getKey:
+    parameters: []
+    get:
+      summary: Get Key Values
+      tags: []
+      responses:
+        '200':
+          description: |-
+            List of values of the requested keys
+
+            If a key was not found, the following line is returned: `*test=Access denied`
+          content:
+            text/plain:
+              schema:
+                type: string
+                description: Line-seprarated string with Key=Value pairs
+              examples:
+                example:
+                  value: |-
+                    Hka_Bd.ulBetriebssekunden=35289
+                    Hka_Bd_Stat.uchSeriennummer=1234567890
+                    Hka_Bd_Stat.uchTeilenummer=4700046004
+        '401':
+          description: Unauthorized
+      operationId: get-keys
+      description: |-
+        Get values by a list of keys given as the query parameter.
+
+        See the full list of query parameter values in the other documentation, as the list is very long.
+      parameters:
+        - schema:
+            type: array
+            uniqueItems: true
+            example: Hka_Bd.ulBetriebssekunden
+            enum:
+              - Hka_Bd.Anforderung.ModulAnzahl
+              - Hka_Bd.Anforderung.UStromF_Anf.bFlagSF
+              - Hka_Bd.UStromF_Frei.bFreigabe
+              - Hka_Bd.bStoerung
+              - Hka_Bd.bWarnung
+              - Hka_Bd.UHka_Anf.Anforderung.fStrom
+              - Hka_Bd.UHka_Anf.usAnforderung
+              - Hka_Bd.UHka_Frei.usFreigabe
+              - Hka_Bd.ulArbeitElektr
+              - Hka_Bd.ulArbeitThermHka
+              - Hka_Bd.ulArbeitThermKon
+              - Hka_Bd.ulBetriebssekunden
+              - Hka_Bd.ulAnzahlStarts
+              - Hka_Bd_Stat.uchSeriennummer
+              - Hka_Bd_Stat.uchTeilenummer
+              - Hka_Bd_Stat.ulInbetriebnahmedatum
+              - BD3112.Hka_Bd.ulBetriebssekunden
+              - BD3112.Hka_Bd.ulAnzahlStarts
+              - BD3112.Hka_Bd.ulArbeitElektr
+              - BD3112.Hka_Bd.ulArbeitThermHka
+              - BD3112.Hka_Bd.ulArbeitThermKon
+              - BD3112.Ww_Bd.ulWwMengepA
+              - Brenner_Bd.bIstStatus
+              - Brenner_Bd.bWarnung
+              - Brenner_Bd.UBrenner_Anf.usAnforderung
+              - Brenner_Bd.UBrenner_Frei.bFreigabe
+              - Brenner_Bd.ulAnzahlStarts
+              - Brenner_Bd.ulBetriebssekunden
+              - Hka_Ew.HydraulikNr.bSpeicherArt
+              - Hka_Ew.HydraulikNr.bWW_Art
+              - Hka_Ew.HydraulikNr.b2_Waermeerzeuger
+              - Hka_Ew.HydraulikNr.bMehrmodul
+              - Hka_Mw1.Temp.sAbgasHKA
+              - Hka_Mw1.Temp.sAbgasMotor
+              - Hka_Mw1.Temp.sKapsel
+              - Hka_Mw1.Temp.sbAussen
+              - Hka_Mw1.Temp.sbFreigabeModul
+              - Hka_Mw1.Temp.sbFuehler1
+              - Hka_Mw1.Temp.sbFuehler2
+              - Hka_Mw1.Temp.sbGen
+              - Hka_Mw1.Temp.sbMotor
+              - Hka_Mw1.Temp.sbRegler
+              - Hka_Mw1.Temp.sbRuecklauf
+              - Hka_Mw1.Temp.sbVorlauf
+              - Hka_Mw1.Temp.sbZS_Fuehler3
+              - Hka_Mw1.Temp.sbZS_Fuehler4
+              - Hka_Mw1.Temp.sbZS_Vorlauf1
+              - Hka_Mw1.Temp.sbZS_Vorlauf2
+              - Hka_Mw1.Temp.sbZS_Warmwasser
+              - Hka_Mw1.Solltemp.sbRuecklauf
+              - Hka_Mw1.Solltemp.sbVorlauf
+              - Hka_Mw1.Aktor.bWwPumpe
+              - Hka_Mw1.Aktor.fFreiAltWaerm
+              - Hka_Mw1.Aktor.fMischer1Auf
+              - Hka_Mw1.Aktor.fMischer1Zu
+              - Hka_Mw1.Aktor.fMischer2Auf
+              - Hka_Mw1.Aktor.fMischer2Zu
+              - Hka_Mw1.Aktor.fProgAus1
+              - Hka_Mw1.Aktor.fProgAus2
+              - Hka_Mw1.Aktor.fProgAus3
+              - Hka_Mw1.Aktor.fStoerung
+              - Hka_Mw1.Aktor.fUPHeizkreis1
+              - Hka_Mw1.Aktor.fUPHeizkreis2
+              - Hka_Mw1.Aktor.fUPKuehlung
+              - Hka_Mw1.Aktor.fUPVordruck
+              - Hka_Mw1.Aktor.fUPZirkulation
+              - Hka_Mw1.Aktor.fWartung
+              - Hka_Mw1.sWirkleistung
+              - Hka_Mw1.ulMotorlaufsekunden
+              - Hka_Mw1.usDrehzahl
+              - 'Laufraster15Min_aktTag.bDoppelstunde[0]'
+              - 'Laufraster15Min_aktTag.bDoppelstunde[1]'
+              - 'Laufraster15Min_aktTag.bDoppelstunde[2]'
+              - 'Laufraster15Min_aktTag.bDoppelstunde[3]'
+              - 'Laufraster15Min_aktTag.bDoppelstunde[4]'
+              - 'Laufraster15Min_aktTag.bDoppelstunde[5]'
+              - 'Laufraster15Min_aktTag.bDoppelstunde[6]'
+              - 'Laufraster15Min_aktTag.bDoppelstunde[7]'
+              - 'Laufraster15Min_aktTag.bDoppelstunde[8]'
+              - 'Laufraster15Min_aktTag.bDoppelstunde[9]'
+              - 'Laufraster15Min_aktTag.bDoppelstunde[10]'
+              - 'Laufraster15Min_aktTag.bDoppelstunde[11'
+              - 'Mm[0].ModulSteuerung.fModulLaeuft'
+              - 'Mm[0].ModulSteuerung.fModulVerfuegbar'
+              - 'Mm[1].ModulSteuerung.fModulLaeuft'
+              - 'Mm[1].ModulSteuerung.fModulVerfuegbar'
+              - 'Mm[2].ModulSteuerung.fModulLaeuft'
+              - 'Mm[2].ModulSteuerung.fModulVerfuegbar'
+              - 'Mm[3].ModulSteuerung.fModulLaeuft'
+              - 'Mm[3].ModulSteuerung.fModulVerfuegbar'
+              - 'Mm[4].ModulSteuerung.fModulLaeuft'
+              - 'Mm[4].ModulSteuerung.fModulVerfuegbar'
+              - 'Mm[5].ModulSteuerung.fModulLaeuft'
+              - 'Mm[5].ModulSteuerung.fModulVerfuegbar'
+              - 'Mm[6].ModulSteuerung.fModulLaeuft'
+              - 'Mm[6].ModulSteuerung.fModulVerfuegbar'
+              - 'Mm[7].ModulSteuerung.fModulLaeuft'
+              - 'Mm[7].ModulSteuerung.fModulVerfuegbar'
+              - 'Mm[8].ModulSteuerung.fModulLaeuft'
+              - 'Mm[8].ModulSteuerung.fModulVerfuegbar'
+              - 'Mm[9].ModulSteuerung.fModulLaeuft'
+              - 'Mm[9].ModulSteuerung.fModulVerfuegbar'
+              - Mm_MinMax.bModulBhMaxWart
+              - Mm_MinMax.bModulBhMinWart
+              - Mm_MinMax.sBhMaxWart
+              - Mm_MinMax.sBhMinWart
+              - Mm_MinMax.ModulBhMax.bModulNr
+              - Mm_MinMax.ModulBhMax.ulWert
+              - Mm_MinMax.ModulBhMin.bModulNr
+              - Mm_MinMax.ModulBhMin.ulWert
+              - Mm_MinMax.ModulStartMax.bModulNr
+              - Mm_MinMax.ModulStartMax.ulWert
+              - Mm_MinMax.ModulStartMin.bModulNr
+              - Mm_MinMax.ModulStartMin.ulWert
+              - Wartung_Cache.fStehtAn
+              - Wartung_Cache.ulBetriebssekundenBei
+              - Wartung_Cache.ulZeitstempel
+              - Wartung_Cache.usIntervall
+          in: query
+          name: k
+          description: Array of keys to fetch values of
+          required: true
+  /setKeys:
+    post:
+      summary: Set Keys
+      operationId: set-keys
+      description: Set values of given keys
+      requestBody:
+        content:
+          text/plain:
+            schema:
+              type: string
+              description: |-
+                List of keys with values connected by "&"
+
+                "key1=value1&key2=value2"
+            examples:
+              example:
+                value: Stromf_Ew.Anforderung_GLT.bAktiv=1&Stromf_Ew.Anforderung_GLT.bAnzahlModule=1
+        description: |-
+          Possible Keys are:
+
+          - Stromf_Ew.Anforderung_GLT.bAktiv
+          - Stromf_Ew.Anforderung_GLT.bAnzahlModule
+      responses:
+        '200':
+          description: The result is a list of the keys followed by the status like "ok"
+          content:
+            text/plain:
+              schema:
+                type: string
+                description: Line separated list
+              examples:
+                example:
+                  value: |-
+                    Stromf_Ew.Anforderung_GLT.bAktiv ok
+                    Stromf_Ew.Anforderung_GLT.bAnzahlModule ok
+        '401':
+          description: Unauthorized
+    parameters: []
+components:
+  schemas: {}
+  securitySchemes:
+    Basic Auth:
+      type: http
+      scheme: basic
+      description: |
+        ## Defaults
+        Username: `glt`
+
+        Password empty
+
+        ----
+security:
+  - Basic Auth: []
