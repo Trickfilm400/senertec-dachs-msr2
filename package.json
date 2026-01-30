@@ -29,12 +29,12 @@
     "url": "https://github.com/Trickfilm400/senertec-dachs-msr2/"
   },
   "devDependencies": {
-    "@types/lodash": "^4.17.20",
-    "@types/node": "^20.19.22",
+    "@types/lodash": "^4.17.23",
+    "@types/node": "^20.19.30",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "axios": "^1.12.2",
-    "lodash": "^4.17.21"
+    "axios": "^1.13.4",
+    "lodash": "^4.17.23"
   }
 }
