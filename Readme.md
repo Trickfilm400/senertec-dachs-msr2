@@ -70,4 +70,4 @@ client.fetchAll().then(console.log);
 
 - Python Cloud API: https://github.com/Kleinrotti/py-senertec
 
-&copy; 2022-2024 Trickfilm400
+&copy; 2022-2026 Trickfilm400
