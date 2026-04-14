@@ -14,22 +14,22 @@ jobs:
       id-token: write
       packages: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: 22
       - run: npm ci
       - run: npm run build
       #- run: npm version prerelease --no-git-tag-version --preid ${{ github.ref_name }}-${{ github.sha }} (using self-versioned package.json from now on)
       #### PUBLISH TO NPM ####
-      - uses: JS-DevTools/npm-publish@v3
+      - uses: JS-DevTools/npm-publish@v4
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: public
           tag: latest
           provenance: true
       #### PUBLISH TO GITHUB NPM ####
-      - uses: JS-DevTools/npm-publish@v3
+      - uses: JS-DevTools/npm-publish@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           registry: https://npm.pkg.github.com
