@@ -6,6 +6,10 @@ on:
     types:
       - published
 
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -17,17 +21,13 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: "24"
+          registry-url: "https://registry.npmjs.org"
       - run: npm ci
       - run: npm run build
       #- run: npm version prerelease --no-git-tag-version --preid ${{ github.ref_name }}-${{ github.sha }} (using self-versioned package.json from now on)
       #### PUBLISH TO NPM ####
-      - uses: JS-DevTools/npm-publish@v4
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          access: public
-          tag: latest
-          provenance: true
+      - run: npm publish
       #### PUBLISH TO GITHUB NPM ####
       - uses: JS-DevTools/npm-publish@v4
         with:
