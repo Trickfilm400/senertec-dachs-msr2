@@ -4,6 +4,7 @@
 		"target": "es6",
 		"outDir": "dist",
 		"rootDir": "./src",
+		"types": ["node"],
 		"declaration": false,
 		"removeComments": true,
 		"noImplicitAny": true,
