@@ -1,4 +1,3 @@
-import axios, {AxiosResponse} from "axios";
 import ReadKeyList from "./ReadKeyList";
 import * as _ from "lodash";
 import {ClientOptions} from "../interfaces/ClientOptions";
@@ -15,7 +14,7 @@ import {KeyListEntityResponse} from "../interfaces/KeyListEntity";
 export class HttpClient {
     private options: ClientOptions;
     //baseURL
-    private url: string;
+    private readonly url: string;
 
     constructor(options: ClientOptions) {
         this.options = options;
@@ -50,19 +49,12 @@ export class HttpClient {
      * @param {string[]} keys - Array of request keys
      * @return Promise
      */
-    fetchByKeys(...keys: string[]): Promise<Partial<IReadKeyList<KeyListEntityResponse<string | number | boolean>>>> {
-        return new Promise((resolve, reject) => {
-            axios({
-                auth: {
-                    username: this.options.username || "glt",
-                    password: this.options.password || ""
-                },
-                baseURL: this.url,
-                url: `/getKey` + this.urlBuilder(keys)
-            }).then((res: AxiosResponse<string>) => {
-                return this.parser(res.data);
-            }).then(resolve, reject);
+    async fetchByKeys(...keys: string[]): Promise<Partial<IReadKeyList<KeyListEntityResponse<string | number | boolean>>>> {
+        const res = await fetch(`${this.url}/getKey${this.urlBuilder(keys)}`, {
+            headers: [["Authorization", 'Basic ' + Buffer.from((this.options.username || "glt") + ":" + (this.options.password || "")).toString('base64')]]
         });
+        const text = await res.text();
+        return this.parser(text);
     }
 
     /**
